@@ -42,7 +42,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4.6.1
         with:
-          name: html-${{ env.date }}
+          name: allure-report-${{ env.DATE }}
           path: 'ExtentSpark.html'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
