@@ -37,7 +37,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: copy
-        run: cp ${{ github.workspace }}/test-output/Spark/ExtentSpark.html ./index.html
+        run: cp ${{ github.workspace }}/ExtentSpark.html ./index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
