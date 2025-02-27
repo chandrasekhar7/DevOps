@@ -36,10 +36,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: date
+        run: |
+          echo date=$(date) >> $GITHUB_ENV
       - name: upload
         uses: actions/upload-artifact@v4.6.1
         with:
-          name: html-$(date)
+          name: html-${{ env.date }}-${{ github.run_number }}
           path: 'ExtentSpark.html'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
