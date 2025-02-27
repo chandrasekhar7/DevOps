@@ -42,7 +42,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4.6.1
         with:
-          name: html-${{ env.date }}-${{ github.run_number }}
+          name: html-${{ env.date }}
           path: 'ExtentSpark.html'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
